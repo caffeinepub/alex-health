@@ -1,0 +1,99 @@
+{
+  "kind": "build_request",
+  "title": "Rebrand to Alex Health + stronger landing-page marketing + polished post-login UI",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Rebrand the product name to \"Alex Health\" across the unauthenticated landing page, authenticated app shell (header/nav), and HTML metadata so the name is consistent in all visible UI and browser surfaces (e.g., page title, headings, logo alt text).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Call the website, Alex health"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page header shows \"Alex Health\" instead of any previous name.",
+        "Authenticated header/app shell shows \"Alex Health\" instead of any previous name.",
+        "frontend/index.html <title> is updated to include \"Alex Health\" and reflects a professional marketing title.",
+        "No user-facing text shows the old product name."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Enhance the unauthenticated front page (landing) with additional professional marketing content focused on dieting and exercising, including concrete examples of plans and documentation (e.g., sample meal-plan structure, workout-plan structure, and what users will track/log) and clear value propositions about improving lifestyle outcomes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "show more examples on the front page of dieting and exercising",
+          "really markets how we can change the way people live their life with our plans and documentation for a healthy thriving life",
+          "Make it very professional"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page includes at least 2 distinct sections that explicitly cover dieting and exercising with example plan formats (not just generic statements).",
+        "Landing page includes at least one section describing the \"plans + documentation\" workflow in clear, user-facing English (what gets planned, what gets logged, and what users get back from it).",
+        "Landing page keeps a single primary CTA to log in and remains visually consistent with the rest of the site."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Apply a cohesive, professional visual theme across the landing page and authenticated app UI (typography scale, spacing, component styling, and a consistent accent color direction) to make the product feel \"really beautiful\" without introducing new app features.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Make it very professional",
+          "when they login have everything be easy to use and really beautiful"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page and authenticated views share consistent styling for headings, cards, buttons, and section spacing.",
+        "UI remains readable and polished in both light and dark modes.",
+        "No changes are made to read-only component sources under frontend/src/components/ui; styling is achieved via composition and app-level styles."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Improve post-login usability and visual polish in the authenticated app shell and key views by refining navigation clarity, layout hierarchy, and empty/loading states so the app is easy to use immediately after login (desktop and mobile).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "when they login have everything be easy to use and really beautiful"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Authenticated header/nav is visually polished and clearly indicates the current section on both desktop and mobile.",
+        "Primary actions in core areas (e.g., logging/reminders) are easy to discover without adding new backend features.",
+        "Views present professional empty states (when there is no data yet) and non-jarring loading states."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files in frontend immutablePaths (e.g., frontend/src/hooks/useInternetIdentity.ts(x), frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui).",
+    "Do not introduce new backend canisters or external services; keep the existing single-actor Motoko backend unchanged unless strictly required for UI polish (not expected for this request)."
+  ],
+  "nonGoals": [
+    "Do not add new tracking domains (e.g., paid plans, messaging, coaching chat, real-time features).",
+    "Do not implement third-party authentication beyond Internet Identity.",
+    "Do not add new backend data models for “plans”; the request is satisfied via marketing examples and UI/UX polish, not new plan-management functionality."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": [
+      "Update the app icon to reflect the \"Alex Health\" brand with a clean, professional health/fitness look (app-icon.dim_512x512.png > app-icon.dim_512x512.png)",
+      "Adjust the hero banner to better match the new \"Alex Health\" marketing story (dieting + exercise) while staying professional and modern (hero-banner.dim_1600x600.png > hero-banner.dim_1600x600.png)"
+    ]
+  }
+}

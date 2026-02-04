@@ -1,0 +1,107 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-04T22:05:19.345Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 4,
+    "implemented": 4,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Rebrand the product name to \"Alex Health\" across the unauthenticated landing page, authenticated app shell (header/nav), and HTML metadata so the name is consistent in all visible UI and browser surfaces (e.g., page title, headings, logo alt text).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/index.html",
+          "frontend/src/features/auth/AuthLanding.tsx",
+          "frontend/src/features/layout/AppLayout.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/index.html",
+          "frontend/src/features/auth/AuthLanding.tsx",
+          "frontend/src/features/layout/AppLayout.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Enhance the unauthenticated front page (landing) with additional professional marketing content focused on dieting and exercising, including concrete examples of plans and documentation (e.g., sample meal-plan structure, workout-plan structure, and what users will track/log) and clear value propositions about improving lifestyle outcomes.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/features/auth/AuthLanding.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/features/auth/AuthLanding.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Apply a cohesive, professional visual theme across the landing page and authenticated app UI (typography scale, spacing, component styling, and a consistent accent color direction) to make the product feel \"really beautiful\" without introducing new app features.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/src/features/auth/AuthLanding.tsx",
+          "frontend/src/features/layout/AppLayout.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/src/features/auth/AuthLanding.tsx",
+          "frontend/src/features/layout/AppLayout.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Improve post-login usability and visual polish in the authenticated app shell and key views by refining navigation clarity, layout hierarchy, and empty/loading states so the app is easy to use immediately after login (desktop and mobile).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/features/layout/AppLayout.tsx",
+          "frontend/src/components/EmptyState.tsx",
+          "frontend/src/components/LoadingState.tsx",
+          "frontend/src/features/dashboard/DashboardView.tsx",
+          "frontend/src/features/logging/DailyLogsView.tsx",
+          "frontend/src/features/reminders/RemindersView.tsx",
+          "frontend/src/features/progress/ProgressView.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/features/layout/AppLayout.tsx",
+          "frontend/src/components/EmptyState.tsx",
+          "frontend/src/components/LoadingState.tsx",
+          "frontend/src/features/dashboard/DashboardView.tsx",
+          "frontend/src/features/logging/DailyLogsView.tsx",
+          "frontend/src/features/reminders/RemindersView.tsx",
+          "frontend/src/features/progress/ProgressView.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.html",
+    "frontend/public/assets/generated/app-icon.dim_512x512.png",
+    "frontend/public/assets/generated/hero-banner.dim_1600x600.png",
+    "frontend/src/App.tsx",
+    "frontend/src/components/EmptyState.tsx",
+    "frontend/src/components/LoadingState.tsx",
+    "frontend/src/features/auth/AuthLanding.tsx",
+    "frontend/src/features/auth/ProfileSetupDialog.tsx",
+    "frontend/src/features/dashboard/DashboardView.tsx",
+    "frontend/src/features/layout/AppLayout.tsx",
+    "frontend/src/features/logging/DailyLogsView.tsx",
+    "frontend/src/features/logging/ExerciseLogSection.tsx",
+    "frontend/src/features/logging/WellnessLogSection.tsx",
+    "frontend/src/features/progress/ExerciseChart.tsx",
+    "frontend/src/features/progress/ProgressView.tsx",
+    "frontend/src/features/reminders/RemindersView.tsx",
+    "frontend/src/index.css",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

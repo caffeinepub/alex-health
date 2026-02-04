@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        --background: 0.99 0.005 160;
+        --foreground: 0.20 0.015 200;
+        --card: 1 0 0;
+        --card-foreground: 0.20 0.015 200;
+        --popover: 1 0 0;
+        --popover-foreground: 0.20 0.015 200;
+        --primary: 0.55 0.14 200;
+        --primary-foreground: 0.99 0.005 160;
+        --secondary: 0.94 0.008 200;
+        --secondary-foreground: 0.25 0.015 200;
+        --muted: 0.96 0.005 200;
+        --muted-foreground: 0.50 0.012 200;
+        --accent: 0.94 0.008 200;
+        --accent-foreground: 0.25 0.015 200;
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.99 0.005 160;
+        --border: 0.90 0.005 200;
+        --input: 0.90 0.005 200;
+        --ring: 0.55 0.14 200;
+        --chart-1: 0.60 0.16 200;
+        --chart-2: 0.65 0.14 260;
+        --chart-3: 0.70 0.15 140;
+        --chart-4: 0.68 0.18 40;
+        --chart-5: 0.58 0.16 320;
+        --sidebar: 0.99 0.005 160;
+        --sidebar-foreground: 0.20 0.015 200;
+        --sidebar-primary: 0.55 0.14 200;
+        --sidebar-primary-foreground: 0.99 0.005 160;
+        --sidebar-accent: 0.94 0.008 200;
+        --sidebar-accent-foreground: 0.25 0.015 200;
+        --sidebar-border: 0.90 0.005 200;
+        --sidebar-ring: 0.55 0.14 200;
+    }
+
+    .dark {
+        --background: 0.15 0.015 220;
+        --foreground: 0.97 0.005 200;
+        --card: 0.18 0.018 220;
+        --card-foreground: 0.97 0.005 200;
+        --popover: 0.16 0.016 220;
+        --popover-foreground: 0.97 0.005 200;
+        --primary: 0.65 0.16 200;
+        --primary-foreground: 0.15 0.015 220;
+        --secondary: 0.25 0.018 220;
+        --secondary-foreground: 0.97 0.005 200;
+        --muted: 0.25 0.018 220;
+        --muted-foreground: 0.60 0.012 200;
+        --accent: 0.28 0.020 220;
+        --accent-foreground: 0.97 0.005 200;
+        --destructive: 0.60 0.20 25;
+        --destructive-foreground: 0.15 0.015 220;
+        --border: 0.28 0.018 220;
+        --input: 0.28 0.018 220;
+        --ring: 0.55 0.14 200;
+        --chart-1: 0.65 0.16 200;
+        --chart-2: 0.68 0.14 260;
+        --chart-3: 0.72 0.15 140;
+        --chart-4: 0.70 0.18 40;
+        --chart-5: 0.62 0.16 320;
+        --sidebar: 0.18 0.018 220;
+        --sidebar-foreground: 0.97 0.005 200;
+        --sidebar-primary: 0.65 0.16 200;
+        --sidebar-primary-foreground: 0.97 0.005 200;
+        --sidebar-accent: 0.25 0.018 220;
+        --sidebar-accent-foreground: 0.97 0.005 200;
+        --sidebar-border: 0.28 0.018 220;
+        --sidebar-ring: 0.55 0.14 200;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-semibold tracking-tight;
+    }
+    
+    h1 {
+        @apply text-4xl;
+    }
+    
+    h2 {
+        @apply text-3xl;
+    }
+    
+    h3 {
+        @apply text-2xl;
+    }
+}

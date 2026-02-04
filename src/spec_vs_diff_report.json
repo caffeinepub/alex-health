@@ -1,0 +1,60 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-04T22:05:19.312Z",
+  "summary": "Diff implements the Alex Health rebrand across key UI surfaces, adds a significantly expanded marketing landing page, applies a refreshed theme via global CSS tokens (incl. dark mode variables), and improves authenticated UI polish with clearer nav active states plus reusable empty/loading states. However, the requested image asset updates are not evidenced in the diff summary, and a couple of unrequested behaviors (toasts and a custom navigation event) were introduced.",
+  "missing_requirements": [
+    {
+      "requirement": "Update the app icon to reflect the \"Alex Health\" brand (app-icon.dim_512x512.png > app-icon.dim_512x512.png).",
+      "reason": "The diff summary shows the icon being referenced in UI, but does not show any asset/binary change for the icon itself, so the requested image edit cannot be verified as implemented.",
+      "evidence": [
+        "frontend/src/features/auth/AuthLanding.tsx",
+        "frontend/src/features/layout/AppLayout.tsx"
+      ]
+    },
+    {
+      "requirement": "Adjust the hero banner to better match the new \"Alex Health\" marketing story (hero-banner.dim_1600x600.png > hero-banner.dim_1600x600.png).",
+      "reason": "The diff summary shows the banner being referenced, but does not include evidence of the hero banner image file being updated (binary/assets not shown).",
+      "evidence": [
+        "frontend/src/features/auth/AuthLanding.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Introduced toast/notification system usage (sonner Toaster and toast calls).",
+      "reason": "BuildRequest focuses on rebrand, marketing content, and UI polish; it does not request adding a new notification/toast system or user-facing toast behaviors.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/features/auth/ProfileSetupDialog.tsx"
+      ]
+    },
+    {
+      "description": "Added a global custom window event listener for \"navigate-to-logs\" to change views.",
+      "reason": "BuildRequest does not request adding a cross-component custom event navigation mechanism; it is additional behavior beyond stated UI polish requirements.",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/EmptyState.tsx",
+    "frontend/src/components/LoadingState.tsx",
+    "frontend/src/features/auth/AuthLanding.tsx",
+    "frontend/src/features/auth/ProfileSetupDialog.tsx",
+    "frontend/src/features/dashboard/DashboardView.tsx",
+    "frontend/src/features/layout/AppLayout.tsx",
+    "frontend/src/features/logging/DailyLogsView.tsx",
+    "frontend/src/features/logging/ExerciseLogSection.tsx",
+    "frontend/src/features/logging/WellnessLogSection.tsx",
+    "frontend/src/features/progress/ExerciseChart.tsx",
+    "frontend/src/features/progress/ProgressView.tsx",
+    "frontend/src/features/reminders/RemindersView.tsx",
+    "frontend/src/index.css",
+    "project_state.json"
+  ]
+}

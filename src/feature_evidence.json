@@ -1,0 +1,91 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-rebrand-the-product-name-to-alex-health-across-the-unauthenticated-landing-page-authenticated-app-shell-header-nav-and-html-metadata-so-the-name-is-consistent-in-all-visible-ui-and-browser-surfaces-e-g-page-title-headings-logo-alt-text",
+      "featureTitle": "Rebrand the product name to \"Alex Health\" across the unauthenticated landing page, authenticated app shell (header/nav), and HTML metadata so the name is consistent in all visible UI and browser surfaces (e.g., page title, headings, logo alt text).",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/features/auth/AuthLanding.tsx",
+        "frontend/src/features/layout/AppLayout.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-enhance-the-unauthenticated-front-page-landing-with-additional-professional-marketing-content-focused-on-dieting-and-exercising-including-concrete-examples-of-plans-and-documentation-e-g-sample-meal-plan-structure-workout-plan-structure-and-what-users-will-track-log-and-clear-value-propositions-about-improving-lifestyle-outcomes",
+      "featureTitle": "Enhance the unauthenticated front page (landing) with additional professional marketing content focused on dieting and exercising, including concrete examples of plans and documentation (e.g., sample meal-plan structure, workout-plan structure, and what users will track/log) and clear value propositions about improving lifestyle outcomes.",
+      "files": [
+        "frontend/src/features/auth/AuthLanding.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-cohesive-professional-visual-theme-across-the-landing-page-and-authenticated-app-ui-typography-scale-spacing-component-styling-and-a-consistent-accent-color-direction-to-make-the-product-feel-really-beautiful-without-introducing-new-app-features",
+      "featureTitle": "Apply a cohesive, professional visual theme across the landing page and authenticated app UI (typography scale, spacing, component styling, and a consistent accent color direction) to make the product feel \"really beautiful\" without introducing new app features.",
+      "files": [
+        "frontend/src/features/auth/AuthLanding.tsx",
+        "frontend/src/features/layout/AppLayout.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-improve-post-login-usability-and-visual-polish-in-the-authenticated-app-shell-and-key-views-by-refining-navigation-clarity-layout-hierarchy-and-empty-loading-states-so-the-app-is-easy-to-use-immediately-after-login-desktop-and-mobile",
+      "featureTitle": "Improve post-login usability and visual polish in the authenticated app shell and key views by refining navigation clarity, layout hierarchy, and empty/loading states so the app is easy to use immediately after login (desktop and mobile).",
+      "files": [
+        "frontend/src/components/EmptyState.tsx",
+        "frontend/src/components/LoadingState.tsx",
+        "frontend/src/features/dashboard/DashboardView.tsx",
+        "frontend/src/features/layout/AppLayout.tsx",
+        "frontend/src/features/logging/DailyLogsView.tsx",
+        "frontend/src/features/progress/ProgressView.tsx",
+        "frontend/src/features/reminders/RemindersView.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

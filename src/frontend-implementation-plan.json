@@ -1,0 +1,122 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Alex Health rebrand + marketing landing page + polished authenticated UI",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Rebrand all visible product naming to “Alex Health” across landing, authenticated shell, and HTML metadata.",
+      "acceptanceCriteria": [
+        "Landing page header shows \"Alex Health\" instead of any previous name.",
+        "Authenticated header/app shell shows \"Alex Health\" instead of any previous name.",
+        "frontend/index.html <title> is updated to include \"Alex Health\" and reflects a professional marketing title.",
+        "No user-facing text shows the old product name."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update the document title and any brand-related metadata to consistently use “Alex Health” with a professional marketing-style title."
+        },
+        {
+          "path": "frontend/src/features/auth/AuthLanding.tsx",
+          "operation": "modify",
+          "description": "Replace all visible brand references (header text, hero copy, image alt text) with “Alex Health”, ensuring no remaining “VitalFlow” user-facing strings."
+        },
+        {
+          "path": "frontend/src/features/layout/AppLayout.tsx",
+          "operation": "modify",
+          "description": "Update authenticated app shell branding (header logo alt text and product name) to “Alex Health”, ensuring no remaining “VitalFlow” user-facing strings."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Strengthen the unauthenticated landing page with professional dieting + exercise marketing, including concrete example plan formats and the plans+documentation workflow, while keeping a single primary login CTA.",
+      "acceptanceCriteria": [
+        "Landing page includes at least 2 distinct sections that explicitly cover dieting and exercising with example plan formats (not just generic statements).",
+        "Landing page includes at least one section describing the \"plans + documentation\" workflow in clear, user-facing English (what gets planned, what gets logged, and what users get back from it).",
+        "Landing page keeps a single primary CTA to log in and remains visually consistent with the rest of the site."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/features/auth/AuthLanding.tsx",
+          "operation": "modify",
+          "description": "Add professional marketing sections for (1) dieting with a concrete sample meal-plan structure + what users log, and (2) exercising with a concrete workout-plan structure + what users log; add a dedicated section explaining the “plans + documentation” loop and outcomes; keep a single primary CTA button that triggers Internet Identity login. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Apply a cohesive, professional visual theme (typography/spacing/accent direction) across landing and authenticated UI, supporting light and dark modes without editing immutable shadcn/ui sources.",
+      "acceptanceCriteria": [
+        "Landing page and authenticated views share consistent styling for headings, cards, buttons, and section spacing.",
+        "UI remains readable and polished in both light and dark modes.",
+        "No changes are made to read-only component sources under frontend/src/components/ui; styling is achieved via composition and app-level styles."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Refine global theme tokens and base typography/spacing defaults (light + dark) to establish a consistent, professional accent color direction and heading scale across the app."
+        },
+        {
+          "path": "frontend/src/features/auth/AuthLanding.tsx",
+          "operation": "modify",
+          "description": "Align landing sections (hero, marketing blocks, examples) to the updated global theme using consistent spacing, card treatments, and button hierarchy via composition (no edits to frontend/src/components/ui). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/features/layout/AppLayout.tsx",
+          "operation": "modify",
+          "description": "Adjust app shell spacing/typography and header/nav visual hierarchy to match the global theme (consistent container rhythm, button styles, and section spacing) via composition (no edits to frontend/src/components/ui). Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Polish post-login usability: clearer navigation state, improved layout hierarchy, and professional empty/loading states across key authenticated views (desktop + mobile) without adding new backend features.",
+      "acceptanceCriteria": [
+        "Authenticated header/nav is visually polished and clearly indicates the current section on both desktop and mobile.",
+        "Primary actions in core areas (e.g., logging/reminders) are easy to discover without adding new backend features.",
+        "Views present professional empty states (when there is no data yet) and non-jarring loading states."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/features/layout/AppLayout.tsx",
+          "operation": "modify",
+          "description": "Improve navigation clarity by adding a stronger active-state treatment for the current view (desktop + mobile), ensure touch-friendly spacing on mobile, and preserve clear logout behavior. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/EmptyState.tsx",
+          "operation": "create",
+          "description": "Create a reusable authenticated empty-state component (icon/title/description/optional primary action) to standardize professional empty states across views. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/LoadingState.tsx",
+          "operation": "create",
+          "description": "Create a lightweight, non-jarring loading-state component for view-level loading placeholders that matches the global theme and works in light/dark mode. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/features/dashboard/DashboardView.tsx",
+          "operation": "modify",
+          "description": "Adopt the shared EmptyState/LoadingState patterns: show a polished loading placeholder while exercise data is loading and upgrade empty states to include a clearer next-step action (e.g., guidance to Daily Logs) without introducing new features. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/features/logging/DailyLogsView.tsx",
+          "operation": "modify",
+          "description": "Improve layout hierarchy and first-use clarity: ensure primary logging actions remain easy to discover on mobile, and apply shared LoadingState/EmptyState patterns for the day’s exercise/wellness data. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/features/reminders/RemindersView.tsx",
+          "operation": "modify",
+          "description": "Apply shared EmptyState/LoadingState patterns and refine the header/action layout so the primary action (Add Reminder) remains prominent and the empty state looks polished. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/features/progress/ProgressView.tsx",
+          "operation": "modify",
+          "description": "Refine visual hierarchy and loading behavior for progress charts: present a consistent loading placeholder and a professional no-data state when the selected range has no exercise logs, keeping UI consistent across light/dark. Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

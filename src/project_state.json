@@ -1,0 +1,192 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "ICP canister-based holistic wellness + fitness tracker app with Internet Identity authentication, daily logging, reminders, progress dashboards, and a professional marketing-focused landing page (React + shadcn/ui frontend, Motoko backend).",
+  "existing_features": [
+    {
+      "id": "IF-1",
+      "title": "Internet Identity authentication and actor/session hooks",
+      "synonyms": [
+        "II login",
+        "auth",
+        "useInternetIdentity",
+        "useActor"
+      ],
+      "description": "Frontend authentication flow using Internet Identity with actor creation/hooks for authenticated canister calls; includes auth landing and initial profile setup dialog.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-2",
+      "title": "User profile setup (onboarding dialog)",
+      "synonyms": [
+        "profile onboarding",
+        "ProfileSetupDialog"
+      ],
+      "description": "First-run/profile setup UI to collect basic user information after authentication.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-3",
+      "title": "Dashboard view with at-a-glance status",
+      "synonyms": [
+        "DashboardView"
+      ],
+      "description": "Main dashboard screen aggregating key wellness/exercise information and entry points into logs, progress, and reminders.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-4",
+      "title": "Daily logging for exercise and wellness",
+      "synonyms": [
+        "DailyLogsView",
+        "exercise log",
+        "wellness log"
+      ],
+      "description": "Daily logs UI with forms/sections for entering exercise and wellness metrics; includes date picker utilities.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-5",
+      "title": "Reminders management and due reminders banner",
+      "synonyms": [
+        "RemindersView",
+        "RemindersList",
+        "ReminderForm",
+        "DueRemindersBanner"
+      ],
+      "description": "Create/list reminders and show a banner for reminders due; includes reminder utility helpers.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-6",
+      "title": "Progress analytics with charts",
+      "synonyms": [
+        "ProgressView",
+        "ExerciseChart",
+        "WellnessChart"
+      ],
+      "description": "Progress screen showing charted trends for exercise and wellness data over time.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-7",
+      "title": "App layout/navigation shell",
+      "synonyms": [
+        "AppLayout",
+        "sidebar"
+      ],
+      "description": "Application layout with navigation structure for major sections (dashboard, logs, reminders, progress).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-8",
+      "title": "Backend authorization and access control mixins (Motoko)",
+      "synonyms": [
+        "MixinAuthorization",
+        "access-control"
+      ],
+      "description": "Motoko backend authorization/access control components integrated into the canister backend.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-9",
+      "title": "Build/deploy template for ICP React + Motoko project",
+      "synonyms": [
+        "build-template",
+        "Dockerfile",
+        "icp.yaml",
+        "deploy.sh"
+      ],
+      "description": "Repository includes a reusable build template (frontend/backed canister configs, scripts for asset resizing/pruning, and deployment scaffolding).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "feature-rebrand-the-product-name-to-alex-health-across-the-unauthenticated-landing-page-authenticated-app-shell-header-nav-and-html-metadata-so-the-name-is-consistent-in-all-visible-ui-and-browser-surfaces-e-g-page-title-headings-logo-alt-text",
+      "title": "Rebrand the product name to \"Alex Health\" across the unauthenticated landing page, authenticated app shell (header/nav), and HTML metadata so the name is consistent in all visible UI and browser surfaces (e.g., page title, headings, logo alt text).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-the-unauthenticated-front-page-landing-with-additional-professional-marketing-content-focused-on-dieting-and-exercising-including-concrete-examples-of-plans-and-documentation-e-g-sample-meal-plan-structure-workout-plan-structure-and-what-users-will-track-log-and-clear-value-propositions-about-improving-lifestyle-outcomes",
+      "title": "Enhance the unauthenticated front page (landing) with additional professional marketing content focused on dieting and exercising, including concrete examples of plans and documentation (e.g., sample meal-plan structure, workout-plan structure, and what users will track/log) and clear value propositions about improving lifestyle outcomes.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-professional-visual-theme-across-the-landing-page-and-authenticated-app-ui-typography-scale-spacing-component-styling-and-a-consistent-accent-color-direction-to-make-the-product-feel-really-beautiful-without-introducing-new-app-features",
+      "title": "Apply a cohesive, professional visual theme across the landing page and authenticated app UI (typography scale, spacing, component styling, and a consistent accent color direction) to make the product feel \"really beautiful\" without introducing new app features.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-improve-post-login-usability-and-visual-polish-in-the-authenticated-app-shell-and-key-views-by-refining-navigation-clarity-layout-hierarchy-and-empty-loading-states-so-the-app-is-easy-to-use-immediately-after-login-desktop-and-mobile",
+      "title": "Improve post-login usability and visual polish in the authenticated app shell and key views by refining navigation clarity, layout hierarchy, and empty/loading states so the app is easy to use immediately after login (desktop and mobile).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Brand the site as \"Alex health\" (update app/site name across the UI, landing page, and metadata).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Enhance the front page with professional marketing content and concrete examples focused on dieting and exercising, emphasizing lifestyle change through plans and documentation.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Improve post-login UX/UI to be very professional, easy to use, and visually beautiful (polish layout, navigation, and overall design consistency).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "architectural_notes": [
+    "Frontend: React + Vite + Tailwind + shadcn/ui component library.",
+    "Auth: Internet Identity used for login; authenticated actor hooks for canister calls.",
+    "Backend: Motoko canister with authorization/access-control modules.",
+    "Project includes ICP build/deploy template (icp.yaml, Dockerfile, deploy script) and image resize/prune tooling."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Edit Images\n- Update the app icon to reflect the \"Alex Health\" brand with a clean, professional health/fitness look (app-icon.dim_512x512.png > app-icon.dim_512x512.png)\n- Adjust the hero banner to better match the new \"Alex Health\" marketing story (dieting + exercise) while staying professional and modern (hero-banner.dim_1600x600.png > hero-banner.dim_1600x600.png)",
+  "generatedImages": [
+    {
+      "filename": "app-icon.dim_512x512.png",
+      "description": "Update the app icon to reflect the \"Alex Health\" brand with a clean, professional health/fitness look",
+      "targetWidth": 512,
+      "targetHeight": 512
+    },
+    {
+      "filename": "hero-banner.dim_1600x600.png",
+      "description": "Adjust the hero banner to better match the new \"Alex Health\" marketing story (dieting + exercise) while staying professional and modern",
+      "targetWidth": 1600,
+      "targetHeight": 600
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Alex health",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
